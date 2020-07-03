@@ -37,111 +37,111 @@
   [指导方案](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
 - **语言机制**
   - **语法**
-    - 变量: [Built-in types | Zero value concept | Initialization | Conversion vs Casting](go/language/variable.go)
-    - 结构体: [Initialization | Name type vs Anonymous type](go/language/struct.go)
+    - 变量: [Built-in types | Zero value concept | Initialization | Conversion vs Casting](go_cn/language/variable.go)
+    - 结构体: [Initialization | Name type vs Anonymous type](go_cn/language/struct.go)
     - 指针: 
-      - [Passing by value | Escape analysis | Stack space | Garbage Collection](go/language/pointer.go)
+      - [Passing by value | Escape analysis | Stack space | Garbage Collection](go_cn/language/pointer.go)
       - [Golang's Code Review Receiver Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
-    - 常量: [Initialization | iota](go/language/constant.go)
-    - 函数: [Initialization](go/language/function.go)
+    - 常量: [Initialization | iota](go_cn/language/constant.go)
+    - 函数: [Initialization](go_cn/language/function.go)
   - **Data Structures**
-    - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory allocation](go/language/array.go)
-    - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice | Copy of Slice | UTF-8](go/language/slice.go)
-    - Map: [Initialization | Iteration | Deleting | Finding | Restriction ](go/language/map.go)
+    - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory allocation](go_cn/language/array.go)
+    - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice | Copy of Slice | UTF-8](go_cn/language/slice.go)
+    - Map: [Initialization | Iteration | Deleting | Finding | Restriction ](go_cn/language/map.go)
   - **Decoupling**
     - Method: 
-      - [Value and Pointer Receiver Call](go/language/method_1.go)
-      - [Value and Pointer Semantics](go/language/method_2.go)
-      - [Methods are just functions | Function variable](go/language/method_3.go)
+      - [Value and Pointer Receiver Call](go_cn/language/method_1.go)
+      - [Value and Pointer Semantics](go_cn/language/method_2.go)
+      - [Methods are just functions | Function variable](go_cn/language/method_3.go)
     - Interface: 
-      - [Valueless type | Concrete type vs Interface type | Relationship | Polymorphic function](go/language/interface_1.go)
-      - [Interface via Pointer Receiver | Method set | Slice of Interface](go/language/interface_2.go)
+      - [Valueless type | Concrete type vs Interface type | Relationship | Polymorphic function](go_cn/language/interface_1.go)
+      - [Interface via Pointer Receiver | Method set | Slice of Interface](go_cn/language/interface_2.go)
     - Embedding: 
-      - [Declaring fields, NOT Embedding](go/language/embedding_1.go)
-      - [Embedding type | Inner type promotion](go/language/embedding_2.go)
-      - [Embedded type and Interface](go/language/embedding_3.go)
-      - [Outer and inner type implementing the same Interface](go/language/embedding_4.go)
+      - [Declaring fields, NOT Embedding](go_cn/language/embedding_1.go)
+      - [Embedding type | Inner type promotion](go_cn/language/embedding_2.go)
+      - [Embedded type and Interface](go_cn/language/embedding_3.go)
+      - [Outer and inner type implementing the same Interface](go_cn/language/embedding_4.go)
     - Exporting:
-      - [Guideline](go/language/exporting/README.md)
-      - [Exported identifier](go/language/exporting/exporting_1)
-      - [Accessing a value of an unexported identifier](go/language/exporting/exporting_2)
-      - [Unexported fields from an exported struct](go/language/exporting/exporting_3)
-      - [Exported types with embedded unexported types](go/language/exporting/exporting_4)
+      - [Guideline](go_cn/language/exporting/README.md)
+      - [Exported identifier](go_cn/language/exporting/exporting_1)
+      - [Accessing a value of an unexported identifier](go_cn/language/exporting/exporting_2)
+      - [Unexported fields from an exported struct](go_cn/language/exporting/exporting_3)
+      - [Exported types with embedded unexported types](go_cn/language/exporting/exporting_4)
 - **Software Design**
   - Composition:
     [Guideline](https://github.com/ardanlabs/gotraining/tree/master/topics/go#interface-and-composition-design)
     - Grouping types: 
-      - [Grouping By State](go/design/grouping_types_1.go)
-      - [Grouping By Behavior](go/design/grouping_types_2.go)
+      - [Grouping By State](go_cn/design/grouping_types_1.go)
+      - [Grouping By Behavior](go_cn/design/grouping_types_2.go)
     - Decoupling: 
-      - [Struct Composition](go/design/decoupling_1.go)
-      - [Decoupling With Interface](go/design/decoupling_2.go)
-      - [Interface Composition](go/design/decoupling_3.go)
-      - [Decoupling With Interface Composition](go/design/decoupling_4.go)
+      - [Struct Composition](go_cn/design/decoupling_1.go)
+      - [Decoupling With Interface](go_cn/design/decoupling_2.go)
+      - [Interface Composition](go_cn/design/decoupling_3.go)
+      - [Decoupling With Interface Composition](go_cn/design/decoupling_4.go)
     - Conversion: 
-      - [Interface Conversions | Type Assertion](go/design/conversion_1.go)
-      - [Runtime Type Assertion](go/design/conversion_2.go)
+      - [Interface Conversions | Type Assertion](go_cn/design/conversion_1.go)
+      - [Runtime Type Assertion](go_cn/design/conversion_2.go)
     - Interface Pollution: 
-      - [Interface Pollution](go/design/pollution_1.go)
-      - [Remove Interface Pollution](go/design/pollution_2.go)
+      - [Interface Pollution](go_cn/design/pollution_1.go)
+      - [Remove Interface Pollution](go_cn/design/pollution_2.go)
     - Mocking: 
-      - [Package To Mock](go/design/mocking_1.go)
-      - [Sample Client](go/design/mocking_2.go)
+      - [Package To Mock](go_cn/design/mocking_1.go)
+      - [Sample Client](go_cn/design/mocking_2.go)
   - Error Handling: 
-    - [Default error values](go/design/error_1.go)
-    - [Error variables](go/design/error_2.go)
-    - [Type as context](go/design/error_3.go)
-    - [Behavior as context](go/design/error_4.go)
-    - [Finding the bug/pitfall of nil value of error interface](go/design/error_5.go)
-    - [Wrapping Errors](go/design/error_6.go)
-  - Packaging: [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/design/packaging/README.md)
+    - [Default error values](go_cn/design/error_1.go)
+    - [Error variables](go_cn/design/error_2.go)
+    - [Type as context](go_cn/design/error_3.go)
+    - [Behavior as context](go_cn/design/error_4.go)
+    - [Finding the bug/pitfall of nil value of error interface](go_cn/design/error_5.go)
+    - [Wrapping Errors](go_cn/design/error_6.go)
+  - Packaging: [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go_cn/design/packaging/README.md)
   - Dependency management: [Go Modules](https://blog.golang.org/using-go-modules)
 - **Concurrency**
   - **Mechanics**
     - Goroutine: 
-      - [Go Scheduler Internals](go/concurrency/goroutine_1.go)
-      - [Language Mechanics](go/concurrency/goroutine_2.go)
-      - [Goroutine time slicing](go/concurrency/goroutine_3.go)
-      - [Goroutines and parallelism](go/concurrency/goroutine_4.go)
+      - [Go Scheduler Internals](go_cn/concurrency/goroutine_1.go)
+      - [Language Mechanics](go_cn/concurrency/goroutine_2.go)
+      - [Goroutine time slicing](go_cn/concurrency/goroutine_3.go)
+      - [Goroutines and parallelism](go_cn/concurrency/goroutine_4.go)
     - Data race: 
-      - [Race Detection](go/concurrency/data_race_1.go)
-      - [Atomic Functions](go/concurrency/data_race_2.go)
-      - [Mutexes](go/concurrency/data_race_3.go)
-      - [Read/Write Mutex](go/concurrency/data_race_4.go)
+      - [Race Detection](go_cn/concurrency/data_race_1.go)
+      - [Atomic Functions](go_cn/concurrency/data_race_2.go)
+      - [Mutexes](go_cn/concurrency/data_race_3.go)
+      - [Read/Write Mutex](go_cn/concurrency/data_race_4.go)
     - Channel: 
       - [Guideline](https://github.com/ardanlabs/gotraining/tree/master/topics/go#concurrent-software-design)
-      - [Language Mechanics | Unbuffered channel: Signaling with(out) data](go/concurrency/channel_1.go)
-      - [Unbuffered channel: Double signal | Buffered channel: Close and range | Unbuffered channel: select and receive | Unbuffered channel: select and send | Buffered channel: Select and drop](go/concurrency/channel_2.go)
-      - [Unbuffered channel (Tennis match)](go/concurrency/channel_3.go)
-      - [Unbuffered channel (Replay race)](go/concurrency/channel_4.go)
-      - [Buffered channel: Fan Out](go/concurrency/channel_5.go)
-      - [Select](go/concurrency/channel_6.go)
+      - [Language Mechanics | Unbuffered channel: Signaling with(out) data](go_cn/concurrency/channel_1.go)
+      - [Unbuffered channel: Double signal | Buffered channel: Close and range | Unbuffered channel: select and receive | Unbuffered channel: select and send | Buffered channel: Select and drop](go_cn/concurrency/channel_2.go)
+      - [Unbuffered channel (Tennis match)](go_cn/concurrency/channel_3.go)
+      - [Unbuffered channel (Replay race)](go_cn/concurrency/channel_4.go)
+      - [Buffered channel: Fan Out](go_cn/concurrency/channel_5.go)
+      - [Select](go_cn/concurrency/channel_6.go)
   - **Patterns**
     - Context: 
-      - [Store and retrieve values from a context](go/concurrency/context_1.go)
-      - [WithCancel](go/concurrency/context_2.go)
-      - [WithDeadline](go/concurrency/context_3.go)
-      - [WithTimeout](go/concurrency/context_4.go)
-      - [Request/Response](go/concurrency/context_5.go)
+      - [Store and retrieve values from a context](go_cn/concurrency/context_1.go)
+      - [WithCancel](go_cn/concurrency/context_2.go)
+      - [WithDeadline](go_cn/concurrency/context_3.go)
+      - [WithTimeout](go_cn/concurrency/context_4.go)
+      - [Request/Response](go_cn/concurrency/context_5.go)
     - Pattern
       - Task
       - Logger
 - **Testing and Profiling**
   - Testing: 
-    - [Basic Unit Test](go/testing/basic_test.go)
-    - [Table Test](go/testing/table_test.go)
-    - [Sub Test](go/testing/sub_test.go)
-    - [Web Server](go/testing/web_server)
-    - [Mock Server](go/testing/web_test.go)
-    - [Test Coverage](go/testing/README.md)
+    - [Basic Unit Test](go_cn/testing/basic_test.go)
+    - [Table Test](go_cn/testing/table_test.go)
+    - [Sub Test](go_cn/testing/sub_test.go)
+    - [Web Server](go_cn/testing/web_server)
+    - [Mock Server](go_cn/testing/web_test.go)
+    - [Test Coverage](go_cn/testing/README.md)
   - Benchmarking
-    - [Basic Benchmark](go/benchmark/basic_test.go)
-    - [Sub Benchmark](go/benchmark/sub_test.go)
+    - [Basic Benchmark](go_cn/benchmark/basic_test.go)
+    - [Sub Benchmark](go_cn/benchmark/sub_test.go)
   - Fuzzing
-    - [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/testing/fuzzing/README.md)
+    - [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go_cn/testing/fuzzing/README.md)
   - Profiling
-    - Stack Trace: [Review](go/profiling/stack_trace_1.go) | [Packing](go/profiling/stack_trace_2.go)
-    - GODEBUG: [Memory Tracing](go/profiling/memory_tracing.go)
+    - Stack Trace: [Review](go_cn/profiling/stack_trace_1.go) | [Packing](go_cn/profiling/stack_trace_2.go)
+    - GODEBUG: [Memory Tracing](go_cn/profiling/memory_tracing.go)
 
 ## For more resources:
 

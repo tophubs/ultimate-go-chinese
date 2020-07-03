@@ -1,6 +1,6 @@
 # Ultimate Go study guide
 
-### [Ultimate Go中文翻译版]()
+### [Ultimate Go英文原版版]()
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/hoanhan101/ultimate-go)
 ](https://goreportcard.com/report/github.com/hoanhan101/ultimate-go)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// example represents a type with different fields.
+// 不同类型字段表示的struct示例
 type example struct {
 	flag    bool
 	counter int16
@@ -11,9 +11,10 @@ type example struct {
 
 func main() {
 	// ----------------------
-	// Declare and initialize
+	// 声明并初始化
 	// ----------------------
 
+	//
 	// Declare a variable of type example set to its zero value.
 	// How much memory do we allocate for example?
 	// a bool is 1 byte, int16 is 2 bytes, float32 is 4 bytes

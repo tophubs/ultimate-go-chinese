@@ -128,8 +128,8 @@
       - Logger
 - **测试用例和分析**
   - 测试: 
-    - [Basic Unit Test](go_cn/testing/basic_test.go)
-    - [Table Test](go_cn/testing/table_test.go)
+    - [基本单元测试](go_cn/testing/basic_test.go)
+    - [表格测试](go_cn/testing/table_test.go)
     - [Sub Test](go_cn/testing/sub_test.go)
     - [Web Server](go_cn/testing/web_server)
     - [Mock Server](go_cn/testing/web_test.go)

@@ -1,6 +1,7 @@
 # Ultimate Go study guide
 
-### [Ultimate Go中文翻译版]()
+### [Ultimate Go中文翻译版](https://github.com/tophubs/ultimate-go-chinese/blob/master/README_CHINESE_DOC.md)
+### [Ultimate Go英文原版版](https://github.com/tophubs/ultimate-go-chinese/blob/master/README.md)
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/hoanhan101/ultimate-go)
 ](https://goreportcard.com/report/github.com/hoanhan101/ultimate-go)

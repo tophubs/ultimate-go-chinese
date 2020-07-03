@@ -44,12 +44,12 @@
       - [Golang's Code Review Receiver Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
     - 常量: [Initialization | iota](go_cn/language/constant.go)
     - 函数: [Initialization](go_cn/language/function.go)
-  - **Data Structures**
+  - **数据结构**
     - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory allocation](go_cn/language/array.go)
     - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice | Copy of Slice | UTF-8](go_cn/language/slice.go)
     - Map: [Initialization | Iteration | Deleting | Finding | Restriction ](go_cn/language/map.go)
-  - **Decoupling**
-    - Method: 
+  - **解耦**
+    - 方法: 
       - [Value and Pointer Receiver Call](go_cn/language/method_1.go)
       - [Value and Pointer Semantics](go_cn/language/method_2.go)
       - [Methods are just functions | Function variable](go_cn/language/method_3.go)
@@ -126,21 +126,21 @@
     - Pattern
       - Task
       - Logger
-- **Testing and Profiling**
-  - Testing: 
+- **测试用例和分析**
+  - 测试: 
     - [Basic Unit Test](go_cn/testing/basic_test.go)
     - [Table Test](go_cn/testing/table_test.go)
     - [Sub Test](go_cn/testing/sub_test.go)
     - [Web Server](go_cn/testing/web_server)
     - [Mock Server](go_cn/testing/web_test.go)
     - [Test Coverage](go_cn/testing/README.md)
-  - Benchmarking
+  - 性能基准
     - [Basic Benchmark](go_cn/benchmark/basic_test.go)
     - [Sub Benchmark](go_cn/benchmark/sub_test.go)
-  - Fuzzing
+  - 模糊测试
     - [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go_cn/testing/fuzzing/README.md)
-  - Profiling
-    - Stack Trace: [Review](go_cn/profiling/stack_trace_1.go) | [Packing](go_cn/profiling/stack_trace_2.go)
+  - 分析
+    - 堆栈跟踪: [Review](go_cn/profiling/stack_trace_1.go) | [Packing](go_cn/profiling/stack_trace_2.go)
     - GODEBUG: [Memory Tracing](go_cn/profiling/memory_tracing.go)
 
 ## For more resources:

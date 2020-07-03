@@ -12,9 +12,9 @@
 [![r/compsci](https://img.shields.io/badge/r/compsci-60%2B-orange)](https://www.reddit.com/r/compsci/comments/cr3jzh/ultimate_go_study_guides_with_heavily_documented/)
 [![r/programming](https://img.shields.io/badge/r/programming-40%2B-orange)](https://www.reddit.com/r/programming/comments/cr3gqu/ultimate_go_study_guides_with_heavily_documented/)
 
-> [101+ coding interview problems with detailed solutions, test cases, and program analysis →](https://github.com/hoanhan101/algo)
+> [101多个编码面试问题，包括详细的解决方案，测试用例和程序分析 →](https://github.com/hoanhan101/algo)
 
-> [Join my mailing list to get the latest updates here →](https://tinyletter.com/hoanhan)
+> [添加你的邮件订阅最新最新消息 →](https://tinyletter.com/hoanhan)
 
 <p align="center">
   <img src="gopher.png" alt="gopher" width="300"/>
@@ -22,30 +22,28 @@
 
 ## Motivation
 
-This repo contains my notes on learning Go and computer systems. Different people have different
-learning style. For me, I learn best by doing and walking through examples. Hence, I am trying to
-take notes carefully and comment directly on the source code, rather than writing up Markdown
-files. That way, I can understand every single line of code as I am reading and also be mindful of
-the theories behind the scene.
+这个仓库包含了我学习Go和计算机系统的笔记。不同的人有不同的学习风格。
+对我而言，我通过做事和逐步学习实例来学习最好。
+因此，我尝试仔细记录笔记并直接在源代码上进行注释，而不是编写Markdown文件。
+这样一来，我可以在阅读时理解每一行代码，并牢记幕后的理论。
 
-In the mix, I also include links to other articles that I find helpful.
+在整片文档中，我还添加部分我觉得有用的链接在当中
 
-If you’re interested in getting updates for this, feel free to join my [mailing 
-list here →](https://tinyletter.com/hoanhan)
+如果您有兴趣获得最近的更新，请添加邮箱快速订阅 [邮箱添加地址 →](https://tinyletter.com/hoanhan)
 
-## Table of Contents 
+## 目录
 
-- **Design Philosophy**:
-  [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
-- **Language Mechanics**
-  - **Syntax**
-    - Variable: [Built-in types | Zero value concept | Initialization | Conversion vs Casting](go/language/variable.go)
-    - Struct: [Initialization | Name type vs Anonymous type](go/language/struct.go)
-    - Pointer: 
+- **设计哲学**:
+  [指导方案](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
+- **语言机制**
+  - **语法**
+    - 变量: [Built-in types | Zero value concept | Initialization | Conversion vs Casting](go/language/variable.go)
+    - 结构体: [Initialization | Name type vs Anonymous type](go/language/struct.go)
+    - 指针: 
       - [Passing by value | Escape analysis | Stack space | Garbage Collection](go/language/pointer.go)
       - [Golang's Code Review Receiver Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
-    - Constant: [Initialization | iota](go/language/constant.go)
-    - Function: [Initialization](go/language/function.go)
+    - 常量: [Initialization | iota](go/language/constant.go)
+    - 函数: [Initialization](go/language/function.go)
   - **Data Structures**
     - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory allocation](go/language/array.go)
     - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice | Copy of Slice | UTF-8](go/language/slice.go)

@@ -37,113 +37,113 @@
   [指导方案](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
 - **语言机制**
   - **语法**
-    - 变量: [Built-in types | Zero value concept | Initialization | Conversion vs Casting](go_cn/language/variable.go)
-    - 结构体: [Initialization | Name type vs Anonymous type](go_cn/language/struct.go)
-    - 指针: 
-      - [Passing by value | Escape analysis | Stack space | Garbage Collection](go_cn/language/pointer.go)
-      - [Golang's Code Review Receiver Type](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
-    - 常量: [Initialization | iota](go_cn/language/constant.go)
-    - 函数: [Initialization](go_cn/language/function.go)
+    - 变量: [内置类型 | 零值概念 | 初始化 | 转换 vs 强制转换](go_cn/language/variable.go)
+    - 结构体: [初始化 | 命名类型 vs 匿名类型](go_cn/language/struct.go)
+    - 指针:
+      - [值传递 | 逃逸分析 | 栈空间 | 垃圾回收](go_cn/language/pointer.go)
+      - [Golang代码评审之接收者类型](https://github.com/golang/go/wiki/CodeReviewComments#receiver-type)
+    - 常量: [初始化 | iota](go_cn/language/constant.go)
+    - 函数: [初始化](go_cn/language/function.go)
   - **数据结构**
-    - Array: [CPU Cache | TLB | Initialization | Iteration | Type array | Contiguous memory allocation](go_cn/language/array.go)
-    - Slice: [Initialization | Length vs Capacity | Reference Type | Appending | Slice of Slice | Copy of Slice | UTF-8](go_cn/language/slice.go)
-    - Map: [Initialization | Iteration | Deleting | Finding | Restriction ](go_cn/language/map.go)
+    - Array: [CPU缓存 | TLB(页表缓存) | 初始化 | 迭代 | 数组类型 | 连续内存分配](go_cn/language/array.go)
+    - Slice: [初始化 | 长度 vs 容量 | 引用类型 | 切片扩容 | 切片的切片 | 切片拷贝 | UTF-8](go_cn/language/slice.go)
+    - Map: [初始化 | 迭代 | 删除 | 查找 | 限制 ](go_cn/language/map.go)
   - **解耦**
     - 方法: 
-      - [Value and Pointer Receiver Call](go_cn/language/method_1.go)
-      - [Value and Pointer Semantics](go_cn/language/method_2.go)
-      - [Methods are just functions | Function variable](go_cn/language/method_3.go)
-    - Interface: 
-      - [Valueless type | Concrete type vs Interface type | Relationship | Polymorphic function](go_cn/language/interface_1.go)
-      - [Interface via Pointer Receiver | Method set | Slice of Interface](go_cn/language/interface_2.go)
-    - Embedding: 
-      - [Declaring fields, NOT Embedding](go_cn/language/embedding_1.go)
-      - [Embedding type | Inner type promotion](go_cn/language/embedding_2.go)
-      - [Embedded type and Interface](go_cn/language/embedding_3.go)
-      - [Outer and inner type implementing the same Interface](go_cn/language/embedding_4.go)
-    - Exporting:
-      - [Guideline](go_cn/language/exporting/README.md)
-      - [Exported identifier](go_cn/language/exporting/exporting_1)
-      - [Accessing a value of an unexported identifier](go_cn/language/exporting/exporting_2)
-      - [Unexported fields from an exported struct](go_cn/language/exporting/exporting_3)
-      - [Exported types with embedded unexported types](go_cn/language/exporting/exporting_4)
-- **Software Design**
-  - Composition:
-    [Guideline](https://github.com/ardanlabs/gotraining/tree/master/topics/go#interface-and-composition-design)
-    - Grouping types: 
-      - [Grouping By State](go_cn/design/grouping_types_1.go)
-      - [Grouping By Behavior](go_cn/design/grouping_types_2.go)
-    - Decoupling: 
-      - [Struct Composition](go_cn/design/decoupling_1.go)
-      - [Decoupling With Interface](go_cn/design/decoupling_2.go)
-      - [Interface Composition](go_cn/design/decoupling_3.go)
-      - [Decoupling With Interface Composition](go_cn/design/decoupling_4.go)
-    - Conversion: 
-      - [Interface Conversions | Type Assertion](go_cn/design/conversion_1.go)
-      - [Runtime Type Assertion](go_cn/design/conversion_2.go)
-    - Interface Pollution: 
-      - [Interface Pollution](go_cn/design/pollution_1.go)
-      - [Remove Interface Pollution](go_cn/design/pollution_2.go)
-    - Mocking: 
-      - [Package To Mock](go_cn/design/mocking_1.go)
-      - [Sample Client](go_cn/design/mocking_2.go)
-  - Error Handling: 
-    - [Default error values](go_cn/design/error_1.go)
-    - [Error variables](go_cn/design/error_2.go)
-    - [Type as context](go_cn/design/error_3.go)
-    - [Behavior as context](go_cn/design/error_4.go)
-    - [Finding the bug/pitfall of nil value of error interface](go_cn/design/error_5.go)
-    - [Wrapping Errors](go_cn/design/error_6.go)
-  - Packaging: [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go_cn/design/packaging/README.md)
-  - Dependency management: [Go Modules](https://blog.golang.org/using-go-modules)
-- **Concurrency**
-  - **Mechanics**
+      - [值接收者和指针接收者调用](go_cn/language/method_1.go)
+      - [值和指针语义](go_cn/language/method_2.go)
+      - [方法就是函数 | 函数变量](go_cn/language/method_3.go)
+    - 接口: 
+      - [值类型 | 具体类型 vs 接口类型 | 关系 | 多态函数](go_cn/language/interface_1.go)
+      - [指针接收者接口 | 方法设置 | 切片接口](go_cn/language/interface_2.go)
+    - 嵌入: 
+      - [声明字段而不是嵌入](go_cn/language/embedding_1.go)
+      - [嵌入类型 | 内部类型提升](go_cn/language/embedding_2.go)
+      - [嵌入类型和接口](go_cn/language/embedding_3.go)
+      - [实现相同接口的外部类型和内部类型](go_cn/language/embedding_4.go)
+    - 导出:
+      - [指导方案](go_cn/language/exporting/README.md)
+      - [导出标识符](go_cn/language/exporting/exporting_1)
+      - [访问未导出标识符的值](go_cn/language/exporting/exporting_2)
+      - [导出结构体的未导出字段](go_cn/language/exporting/exporting_3)
+      - [具有嵌入式未导出类型的导出类型](go_cn/language/exporting/exporting_4)
+- **软件设计**
+  - 组成:
+    [指导方案](https://github.com/ardanlabs/gotraining/tree/master/topics/go#interface-and-composition-design)
+    - 分组类型: 
+      - [按状态分组](go_cn/design/grouping_types_1.go)
+      - [按行为分组](go_cn/design/grouping_types_2.go)
+    - 解耦: 
+      - [结构体组合](go_cn/design/decoupling_1.go)
+      - [用接口解耦](go_cn/design/decoupling_2.go)
+      - [接口组合](go_cn/design/decoupling_3.go)
+      - [接口组合解耦](go_cn/design/decoupling_4.go)
+    - 转换: 
+      - [接口转换 | 类型断言](go_cn/design/conversion_1.go)
+      - [运行时类型断言](go_cn/design/conversion_2.go)
+    - 接口污染: 
+      - [接口污染](go_cn/design/pollution_1.go)
+      - [移除接口污染](go_cn/design/pollution_2.go)
+    - 模拟: 
+      - [模拟的包](go_cn/design/mocking_1.go)
+      - [客户端样本](go_cn/design/mocking_2.go)
+  - 错误处理: 
+    - [错误默认值](go_cn/design/error_1.go)
+    - [错误变量](go_cn/design/error_2.go)
+    - [类型为上下文](go_cn/design/error_3.go)
+    - [行为作为上下文](go_cn/design/error_4.go)
+    - [查找错误接口的空值的bug/陷阱](go_cn/design/error_5.go)
+    - [错误包装](go_cn/design/error_6.go)
+  - 包: [指导方案](https://github.com/ardanlabs/gotraining/blob/master/topics/go_cn/design/packaging/README.md)
+  - 依赖管理: [Go Modules](https://blog.golang.org/using-go-modules)
+- **并发**
+  - **结构**
     - Goroutine: 
-      - [Go Scheduler Internals](go_cn/concurrency/goroutine_1.go)
-      - [Language Mechanics](go_cn/concurrency/goroutine_2.go)
-      - [Goroutine time slicing](go_cn/concurrency/goroutine_3.go)
-      - [Goroutines and parallelism](go_cn/concurrency/goroutine_4.go)
-    - Data race: 
-      - [Race Detection](go_cn/concurrency/data_race_1.go)
-      - [Atomic Functions](go_cn/concurrency/data_race_2.go)
-      - [Mutexes](go_cn/concurrency/data_race_3.go)
-      - [Read/Write Mutex](go_cn/concurrency/data_race_4.go)
+      - [Go内部调度器](go_cn/concurrency/goroutine_1.go)
+      - [语言结构](go_cn/concurrency/goroutine_2.go)
+      - [Goroutine时间片](go_cn/concurrency/goroutine_3.go)
+      - [Goroutines和并行](go_cn/concurrency/goroutine_4.go)
+    - 数据竞争: 
+      - [竞态检测](go_cn/concurrency/data_race_1.go)
+      - [原子函数](go_cn/concurrency/data_race_2.go)
+      - [锁](go_cn/concurrency/data_race_3.go)
+      - [读写锁](go_cn/concurrency/data_race_4.go)
     - Channel: 
-      - [Guideline](https://github.com/ardanlabs/gotraining/tree/master/topics/go#concurrent-software-design)
-      - [Language Mechanics | Unbuffered channel: Signaling with(out) data](go_cn/concurrency/channel_1.go)
-      - [Unbuffered channel: Double signal | Buffered channel: Close and range | Unbuffered channel: select and receive | Unbuffered channel: select and send | Buffered channel: Select and drop](go_cn/concurrency/channel_2.go)
-      - [Unbuffered channel (Tennis match)](go_cn/concurrency/channel_3.go)
-      - [Unbuffered channel (Replay race)](go_cn/concurrency/channel_4.go)
-      - [Buffered channel: Fan Out](go_cn/concurrency/channel_5.go)
+      - [指导方案](https://github.com/ardanlabs/gotraining/tree/master/topics/go#concurrent-software-design)
+      - [语言结构 | 未缓冲的channel: Signaling with(out) data](go_cn/concurrency/channel_1.go)
+      - [未缓冲的channel: 双重信号 | 带缓冲的channel: 关闭和遍历 | 未缓冲的channel: 选择和接收 | 未缓冲的channel: 选择和发送 | 带缓冲的channel: Select and drop](go_cn/concurrency/channel_2.go)
+      - [未缓冲的channel (Tennis match)](go_cn/concurrency/channel_3.go)
+      - [未缓冲的channel (Replay race)](go_cn/concurrency/channel_4.go)
+      - [带缓冲的channel: Fan Out](go_cn/concurrency/channel_5.go)
       - [Select](go_cn/concurrency/channel_6.go)
-  - **Patterns**
+  - **模式**
     - Context: 
-      - [Store and retrieve values from a context](go_cn/concurrency/context_1.go)
+      - [在上下文存储和检索数据](go_cn/concurrency/context_1.go)
       - [WithCancel](go_cn/concurrency/context_2.go)
       - [WithDeadline](go_cn/concurrency/context_3.go)
       - [WithTimeout](go_cn/concurrency/context_4.go)
-      - [Request/Response](go_cn/concurrency/context_5.go)
+      - [请求/响应](go_cn/concurrency/context_5.go)
     - Pattern
       - Task
       - Logger
-- **测试用例和分析**
+- **测试和分析**
   - 测试: 
-    - [基本单元测试](go_cn/testing/basic_test.go)
+    - [基础单元测试](go_cn/testing/basic_test.go)
     - [表格测试](go_cn/testing/table_test.go)
-    - [Sub Test](go_cn/testing/sub_test.go)
-    - [Web Server](go_cn/testing/web_server)
-    - [Mock Server](go_cn/testing/web_test.go)
-    - [Test Coverage](go_cn/testing/README.md)
-  - 性能基准
-    - [Basic Benchmark](go_cn/benchmark/basic_test.go)
-    - [Sub Benchmark](go_cn/benchmark/sub_test.go)
-  - 模糊测试
-    - [Guideline](https://github.com/ardanlabs/gotraining/blob/master/topics/go_cn/testing/fuzzing/README.md)
+    - [子测试](go_cn/testing/sub_test.go)
+    - [web服务器](go_cn/testing/web_server)
+    - [模拟服务器](go_cn/testing/web_test.go)
+    - [测试覆盖率](go_cn/testing/README.md)
+  - 基准测试
+    - [基础基准测试](go_cn/benchmark/basic_test.go)
+    - [子基准测试](go_cn/benchmark/sub_test.go)
+  - Fuzzing
+    - [指导方案](https://github.com/ardanlabs/gotraining/blob/master/topics/go_cn/testing/fuzzing/README.md)
   - 分析
     - 堆栈跟踪: [Review](go_cn/profiling/stack_trace_1.go) | [Packing](go_cn/profiling/stack_trace_2.go)
-    - GODEBUG: [Memory Tracing](go_cn/profiling/memory_tracing.go)
+    - GODEBUG: [内存跟踪](go_cn/profiling/memory_tracing.go)
 
-## For more resources:
+## 更多资源:
 
 - [Ultimate Go Programming](https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/)
 - [ardanlabs/gotraining/topics/courses/go](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)

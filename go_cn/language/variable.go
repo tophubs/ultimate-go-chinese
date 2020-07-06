@@ -4,49 +4,47 @@ import "fmt"
 
 func main() {
 	// --------------
-	// Built-in types
+	// 内置类型
 	// --------------
 
-	// Type provides integrity and readability.
-	// - What is the amount of memory that we allocate?
-	// - What does that memory represent?
+	// 类型提供了完整性和可读性.
+	// - 我们分配了多少内存？
+	// - 这些内存代表了什么？
 
-	// Type can be specific such as int32 or int64.
-	// For example,
-	// - uint8 contains a base 10  number using one byte of memory
-	// - int32 contains a base 10 number using 4 bytes of memory.
+	// 类型可以是特定的，比如int32或int64。
+	// 例子，
+	// - uint8包含一个以10为基数的数字，使用一个字节的内存。
+	// - int32包含一个使用4字节内存的以10为基数的数。
 
-	// When we declare a type without being very specific, such as uint or int, it gets mapped
-	// based on the architecture we are building the code against.
-	// On a 64-bit OS, int will map to int64. Similarly, on a 32 bit OS, it becomes int32.
+	// 当我们声明一个类型而不是非常特定时，比如uint或int，
+	// 它会根据构建代码所依据的体系结构进行映射。
+	// 在64位操作系统上，int会映射到int64。类似地，在32位操作系统中，它变成了int32。
 
-	// The word size is the number of bytes in a word, which matches our address size.
-	// For example, in 64-bit architecture, the word size is 64 bit (8 bytes), address size is 64
-	// bit then our integer should be 64 bit.
+	// 字母的大小是字母的字节数，它匹配我们的地址大小。
+	// 例如，在64位体系结构中，字母大小是64位(8字节)，地址大小是64位，那么整数应该是64位。
 
 	// ------------------
-	// Zero value concept
+	// 零值概念
 	// ------------------
 
-	// Every single value we create must be initialized. If we don't specify it, it will be set to
-	// the zero value. The entire allocation of memory, we reset that bit to 0.
+	// 我们创建的每个值都必须初始化。 如果我们初始化，对应的值会被设成零值。
+	// 对于整个内存分配，我们将那个位重置为0，下面是具体类型的默认零值。
 	// - Boolean false
 	// - Integer 0
 	// - Floating Point 0
 	// - Complex 0i
-	// - String "" (empty string)
+	// - String "" (空字符串)
 	// - Pointer nil
 
-	// Strings are a series of uint8 types.
-	// A string is a two word data structure: first word represents a pointer to a backing array, the
-	// second word represents its length.
-	// If it is a zero value then the first word is nil, the second word is 0.
+	// 字符串是一系列的uint8类型。
+	// 一个字符串是包含两个字段的结构体: 第一个字段是一个指向底层字符数组的指针, 第二个字段是字符串的长度
+	// 如果它被设成了零值，它的第一个字段值为nil，第二个为0.
 
 	// ----------------------
-	// Declare and initialize
+	// 声明和初始化
 	// ----------------------
 
-	// var is the only guarantee to initialize a zero value for a type.
+	// var是为类型初始化零值的唯一语法。
 	var a int
 	var b string
 	var c float64
@@ -57,7 +55,7 @@ func main() {
 	fmt.Printf("var c float64 \t %T [%v]\n", c, c)
 	fmt.Printf("var d bool \t %T [%v]\n\n", d, d)
 
-	// Using the short variable declaration operator, we can define and initialize at the same time.
+	// 使用短变量声明操作符，我们可以同时定义和初始化。
 	aa := 10
 	bb := "hello" // 1st word points to a array of characters, 2nd word is 5 bytes
 	cc := 3.14159
@@ -69,14 +67,13 @@ func main() {
 	fmt.Printf("dd := true \t %T [%v]\n\n", dd, dd)
 
 	// ---------------------
-	// Conversion vs casting
+	// 转换和强制转换
 	// ---------------------
 
-	// Go doesn't have casting, but conversion.
-	// Instead of telling a compiler to pretend to have some more bytes, we have to allocate more
-	// memory.
+	// Go没有强制转换，但是有转换。
+	// 我们必须分配更多的内存，而不是让编译器假装拥有更多字节。
 
-	// Specify type and perform a conversion.
+	// 具体类型转换，如aaa int转换为int32。
 	aaa := int32(10)
 
 	fmt.Printf("aaa := int32(10) %T [%v]\n", aaa, aaa)

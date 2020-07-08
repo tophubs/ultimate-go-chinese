@@ -1,12 +1,39 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+)
 
 // 不同类型字段表示的struct示例
 type example struct {
 	flag    bool
 	counter int16
 	pi      float32
+}
+
+type Part1 struct {
+	a bool
+	b int32
+	c int8
+	d int64
+	e byte
+}
+
+type Part2 struct {
+	e byte
+	c int8
+	a bool
+	b int32
+	d int64
+}
+
+type Part3 struct {
+	d int64
+	b int32
+	a bool
+	c int8
+	e byte
 }
 
 func main() {
@@ -22,7 +49,8 @@ func main() {
 	// 这使我们产生了填充和对齐的新概念。
 	// 填充字节位于bool和int16之间。原因在于对齐。
 
-	// 对齐的思想：这种硬件在对齐边界上读取内存效率更高。 我们将解决对齐边界问题，因此硬件人员不会。
+	// 对齐的思想：这种硬件在对齐边界上读取内存效率更高。
+	// 具体内存对齐分析参考：https://zhuanlan.zhihu.com/p/53413177
 
 	// 规则 1:
 	// 根据特定值的大小，Go决定了我们需要的对齐方式。每两个字节的值必须遵循两个字节的边界。
@@ -35,8 +63,16 @@ func main() {
 
 	// 规则 2:
 	// 最大的字段代表整个结构的填充。我们需要尽可能减少填充量。
-	// 始终按从高到底的顺序排列字段。
-	// 这会将所有填充向下推到底部。
+	// 始终按字节大小从高到底的顺序排列字段,或者从低到高的顺序排列字段，而不是乱序。
+	// 这会减小结构体的内存占用大小，例子如下。
+
+	part1 := Part1{}
+	part2 := Part2{}
+	part3 := Part3{}
+
+	fmt.Printf("part1 size: %d, align: %d\n", unsafe.Sizeof(part1), unsafe.Alignof(part1))
+	fmt.Printf("part2 size: %d, align: %d\n", unsafe.Sizeof(part2), unsafe.Alignof(part2))
+	fmt.Printf("part3 size: %d, align: %d\n", unsafe.Sizeof(part3), unsafe.Alignof(part3))
 
 	// 在本例中，整个结构大小必须遵循一个8字节的值，因为int64是8字节。
 	// type example struct {

@@ -1,34 +1,55 @@
 // ---------
-// CPU CACHE
+// CPU 缓存
 // ---------
 
 // Cores DO NOT access main memory directly but their local caches.
-// What store in caches are data and instruction.
+// CPU 不会直接访问计算机的主存，而是访问自带的高速缓存。
+// 高速缓存中存储的是数据和指令。
 
-// Cache speed from fastest to slowest: L1 -> L2 -> L3 -> main memory.
+// 高速缓存从最快到最慢：L1-> L2-> L3->主内存。
+
 // Scott Meyers: "If performance matter then the total memory you have is the total amount of
+// 斯科特·迈耶斯（Scott Meyers）：“如果性能很重要，那么您拥有的总内存就是
 // caches" -> access to main memory is incredibly slow; practically speaking it might not even be there.
+//缓存的总数”->访问主内存的速度非常慢；实际上，它甚至可能不存在。
 
 // How do we write code that can be sympathetic with the caching system to make sure that
+//我们如何编写对缓存系统表示同情的代码，以确保
 // we don't have a cache miss or at least, we minimalize cache misses to our fullest potential?
+//我们没有缓存未命中，或者至少没有将缓存未命中最小化到最大程度？
 
 // Processor has a Prefetcher. It predicts what data is needed ahead of time.
+//处理器有一个预取器。它可以提前预测需要哪些数据。
 // There are different granularity depending on where we are on the machine.
+//根据我们在计算机上的位置，可以使用不同的粒度。
 // Our programming model uses a byte. We can read and write to a byte at a time. However, from the
+//我们的编程模型使用一个字节。我们可以一次读写一个字节。但是，从
 // caching system POV, our granularity is not 1 byte. It is 64 bytes, called a cache line. All
+//缓存系统POV，我们的粒度不是1个字节。它是64个字节，称为高速缓存行。我们所有的
 // memory us junked up in this 64 bytes cache line.
+//内存都在这64字节的缓存行中阻塞了。
 
 // Since the caching mechanism is complex, Prefetcher tries to hide all the latency from us.
+//由于缓存机制很复杂，因此Prefetcher会尝试向我们隐藏所有延迟。
 // It has to be able to pick up on predictable access pattern to data.
+//它必须能够采用可预测的数据访问模式。
 // -> We need to write code that create predictable access pattern to data
+//->我们需要编写代码来创建可预测的数据访问模式
 
 // One easy way is to create a contiguous allocation of memory and to iterate over them.
+//一种简单的方法是创建连续的内存分配并对其进行迭代。
 // The array data structure gives us ability to do so.
+//数组数据结构使我们能够执行此操作。
 // From the hardware perspective, array is the most important data structure.
+//从硬件角度来看，数组是最重要的数据结构。
 // From Go perspective, slice is. Array is the backing data structure for slice (like Vector in C++).
+//从Go角度来看，slice是。数组是切片的支持数据结构（如C ++中的Vector）。
 // Once we allocate an array, whatever it size, every element is equal distant from other element.
+//一旦分配了数组，无论数组大小如何，每个元素与其他元素的距离都相等。
 // As we iterate over that array, we begin to walk cache line by cache line. As the Prefetcher see
+//当我们遍历该数组时，我们开始逐行遍历缓存行。当Prefetcher看到
 // that access pattern, it can pick it up and hide all the latency from us.
+//该访问模式时，它可以选择它并向我们隐藏所有延迟。
 
 // For example, we have a big nxn matrix. We do LinkedList Traverse, Column Traverse, and Row Traverse
 // and benchmark against them.

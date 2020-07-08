@@ -8,11 +8,6 @@
 
 // 高速缓存从最快到最慢：L1-> L2-> L3->主内存。
 
-// Scott Meyers: "If performance matter then the total memory you have is the total amount of
-// 斯科特·迈耶斯（Scott Meyers）：“如果性能很重要，那么您拥有的总内存就是
-// caches" -> access to main memory is incredibly slow; practically speaking it might not even be there.
-//缓存的总数”->访问主内存的速度非常慢；实际上，它甚至可能不存在。
-
 // How do we write code that can be sympathetic with the caching system to make sure that
 //我们如何编写对缓存系统表示同情的代码，以确保
 // we don't have a cache miss or at least, we minimalize cache misses to our fullest potential?

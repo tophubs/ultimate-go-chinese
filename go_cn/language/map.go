@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// user defines a user in the program.
+// 在程序中定义用户的结构体。
 type user struct {
 	name    string
 	surname string
@@ -13,17 +13,17 @@ func main() {
 	// Declare and initialize
 	// ----------------------
 
-	// Declare and make a map that stores values of type user with a key of type string.
+	// 声明并初始化一个map，该map存储字符串类型的键用来保存用户类型的值。
 	users1 := make(map[string]user)
 
-	// Add key/value pairs to the map.
+	// 添加键值对到map中
 	users1["Roy"] = user{"Rob", "Roy"}
 	users1["Ford"] = user{"Henry", "Ford"}
 	users1["Mouse"] = user{"Mickey", "Mouse"}
 	users1["Jackson"] = user{"Michael", "Jackson"}
 
 	// ----------------
-	// Iterate over map
+	// 遍历map
 	// ----------------
 
 	fmt.Printf("\n=> Iterate over map\n")
@@ -35,7 +35,7 @@ func main() {
 	// Map literals
 	// ------------
 
-	// Declare and initialize the map with values.
+	// 申明并初始化一个带有初始值的map
 	users2 := map[string]user{
 		"Roy":     {"Rob", "Roy"},
 		"Ford":    {"Henry", "Ford"},
@@ -43,29 +43,29 @@ func main() {
 		"Jackson": {"Michael", "Jackson"},
 	}
 
-	// Iterate over the map.
+	// 遍历整个map
 	fmt.Printf("\n=> Map literals\n")
 	for key, value := range users2 {
 		fmt.Println(key, value)
 	}
 
 	// ----------
-	// Delete key
+	// 删除map中的key
 	// ----------
 
 	delete(users2, "Roy")
 
 	// --------
-	// Find key
+	// 查找key
 	// --------
 
-	// Find the Roy key.
-	// If found is True, we will get a copy value of that type.
-	// if found is False, u is still a value of type user but is set to its zero value.
+	// 查找名为Roy的key
+	// found1为true，u1为该类型的复制值
+	// found2为false,u2为user类型，只不过值为空
 	u1, found1 := users2["Roy"]
 	u2, found2 := users2["Ford"]
 
-	// Display the value and found flag.
+	// 显示查找的值(u)和查找结果(found)
 	fmt.Printf("\n=> Find key\n")
 	fmt.Println("Roy", found1, u1)
 	fmt.Println("Ford", found2, u2)

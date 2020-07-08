@@ -15,56 +15,50 @@ func main() {
 	// ----------------------
 
 	//
-	// Declare a variable of type example set to its zero value.
-	// How much memory do we allocate for example?
-	// a bool is 1 byte, int16 is 2 bytes, float32 is 4 bytes
-	// Putting together, we have 7 bytes. However, the actual answer is 8.
-	// That leads us to a new concept of padding and alignment.
-	// The padding byte is sitting between the bool and the int16. The reason is because of
-	// alignment.
+	// 声明一个示例类型的变量，并将其设置为零值。
+	// 例如，我们分配多少内存?
+	// 一个bool是1字节，int16是2字节，float32是4字节
+	// 放在一起，我们有7个字节。然而，实际的答案是8。
+	// 这使我们产生了填充和对齐的新概念。
+	// 填充字节位于bool和int16之间。原因在于对齐。
 
-	// The idea of alignment: It is more efficient for this piece of hardware to read memory on its
-	// alignment boundary. We will take care of the alignment boundary issues so the hardware
-	// people don't.
+	// 对齐的思想：这种硬件在对齐边界上读取内存效率更高。 我们将解决对齐边界问题，因此硬件人员不会。
 
-	// Rule 1:
-	// Depending on the size a particular value, Go determines the alignment we need. Every 2 bytes
-	// value must follow a 2 bytes boundary. Since the bool value is only 1 byte and start at
-	// address 0, then the next int16 must start on address 2. The byte at address that get skipped
-	// over becomes a 1 byte padding. Similarly, if it is a 4 bytes value then we will have a 3
-	// bytes padding value.
+	// 规则 1:
+	// 根据特定值的大小，Go决定了我们需要的对齐方式。每两个字节的值必须遵循两个字节的边界。
+	// 由于bool值只有1字节并且从地址0开始，所以下一个int16必须从地址2开始。被跳过的地址的字节变成1字节填充。
+	// 类似地，如果它是一个4字节的值，那么我们将有一个3字节的填充值。
 	var e1 example
 
-	// Display the value.
+	// 展示值。
 	fmt.Printf("%+v\n", e1)
 
-	// Rule 2:
-	// The largest field represents the padding for the entire struct.
-	// We need to minimize the amount of padding as possible. Always lay out the field
-	// from highest to smallest. This will push any padding down to the bottom.
+	// 规则 2:
+	// 最大的字段代表整个结构的填充。我们需要尽可能减少填充量。
+	// 始终按从高到底的顺序排列字段。
+	// 这会将所有填充向下推到底部。
 
-	// In this case, the entire struct size has to follow a 8 bytes value because int64 is 8 bytes.
+	// 在本例中，整个结构大小必须遵循一个8字节的值，因为int64是8字节。
 	// type example struct {
 	//     counter int64
 	//     pi      float32
 	//     float   bool
 	// }
 
-	// Declare a variable of type example and init using a struct literal.
-	// Every line must end with a comma.
+	// 使用example类型结构体初始化并声明一个变量
+	// 每一行都以逗号结尾。
 	e2 := example{
 		flag:    true,
 		counter: 10,
 		pi:      3.141592,
 	}
 
-	// Display the field values.
+	// 展示字段值。
 	fmt.Println("Flag", e2.flag)
 	fmt.Println("Counter", e2.counter)
 	fmt.Println("Pi", e2.pi)
 
-	// Declare a variable of an anonymous type and init using a struct literal.
-	// This is one time thing.
+	// 使用匿名结构体声明并初始化一个变量。
 	e3 := struct {
 		flag    bool
 		counter int16
@@ -80,15 +74,13 @@ func main() {
 	fmt.Println("Pi", e3.pi)
 
 	// ---------------------------
-	// Name type vs anonymous type
+	// 命名类型 vs 匿名类型
 	// ---------------------------
 
-	// If we have two name type identical struct, we can't assign one to another.
-	// For example, example1 and example2 are identical struct, var ex1 example1, var ex2 example2.
-	// ex1 = ex2 is not allowed. We have to explicitly say that ex1 = example1(ex2) by performing a
-	// conversion.
-	// However, if ex is a value of identical anonymous struct type (like e3 above), then it is possible to
-	// assign ex1 = ex
+	// 如果我们有两个名称类型相同的结构，我们不能赋值一个给另一个。
+	// 例如，example1和example2是相同的结构，var ex1 example1, var ex2 example2。
+	// ex1 = ex2是不被允许的。我们必须通过执行转换显式地表示ex1 = example1(ex2)。
+	// 但是，如果ex是相同匿名结构类型的值(如上面的e3)，那么可以指定ex1 = ex
 	var e4 example
 	e4 = e3
 

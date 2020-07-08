@@ -50,7 +50,7 @@ func main() {
 	// 填充字节位于bool和int16之间。原因在于对齐。
 
 	// 对齐的思想：这种硬件在对齐边界上读取内存效率更高。
-	// 具体内存对齐分析参考：https://zhuanlan.zhihu.com/p/53413177
+	// 具体内存对齐分析参考：https://zhuanlan.zhihu.com/p/53413177 https://ms2008.github.io/2019/08/01/golang-memory-alignment/
 
 	// 规则 1:
 	// 根据特定值的大小，Go决定了我们需要的对齐方式。每两个字节的值必须遵循两个字节的边界。

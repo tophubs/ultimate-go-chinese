@@ -75,9 +75,8 @@ func main() {
 	// --------------------
 
 	// type users []user
-	// Using this syntax, we can define a set of users
-	// This is a second way we can define users. We can use an existing type and use it as a base for
-	// another type. These are two different types. There is no relationship here.
+	// 使用此语法，我们也可以定义一组用户
+	// 这是我们定义用户的第二种方式。我们可以使用现有类型并将其用作复数类型的基础。这是两种不同的类型。这里没有关系。
 	// However, when we try use it as a key, like: u := make(map[users]int)
 	// the compiler says we cannot use that: "invalid map key type users"
 	// The reason is: whatever we use for the key, the value must be comparable. We have to use it
